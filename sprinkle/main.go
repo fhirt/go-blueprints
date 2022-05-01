@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"math/rand"
 	"os"
@@ -11,10 +12,25 @@ import (
 
 const otherWord = "*"
 
+var transforms = []string{
+	otherWord,
+	otherWord + " app",
+	otherWord + " site",
+	otherWord + " time",
+	"get " + otherWord,
+	"go " + otherWord,
+	"lets " + otherWord,
+	otherWord + " hq",
+}
+
 func main() {
-	transforms, err := readLines("transforms.txt")
-	if err != nil {
-		return
+	path := flag.String("path", "", "the path to the file where additional transforms are defined")
+	flag.Parse()
+	customTransforms, err := readLines(*path)
+	if err == nil {
+		transforms = append(transforms, customTransforms...)
+	} else {
+		fmt.Println(err)
 	}
 	rand.Seed(time.Now().UTC().UnixNano())
 	s := bufio.NewScanner((os.Stdin))
