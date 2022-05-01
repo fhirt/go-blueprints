@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/fhirt/trace"
+	"github.com/fhirt/go-blueprints/trace"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/objx"
 )

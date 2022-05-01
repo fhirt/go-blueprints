@@ -3,7 +3,7 @@ module chat
 go 1.18
 
 require (
-	github.com/fhirt/trace v0.0.0-20220419192119-bc5e4a61c552
+	github.com/fhirt/go-blueprints v0.0.0-20220501144003-8be313041319
 	github.com/gorilla/websocket v1.5.0
 	github.com/stretchr/gomniauth v0.0.0-20170717123514-4b6c822be2eb
 )

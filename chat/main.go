@@ -9,7 +9,7 @@ import (
 	"sync"
 	"text/template"
 
-	"github.com/fhirt/trace"
+	"github.com/fhirt/go-blueprints/trace"
 	"github.com/stretchr/gomniauth"
 	"github.com/stretchr/gomniauth/providers/github"
 	"github.com/stretchr/objx"
