@@ -29,8 +29,6 @@ func main() {
 	customTransforms, err := readLines(*path)
 	if err == nil {
 		transforms = append(transforms, customTransforms...)
-	} else {
-		fmt.Println(err)
 	}
 	rand.Seed(time.Now().UTC().UnixNano())
 	s := bufio.NewScanner((os.Stdin))
